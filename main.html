@@ -18,7 +18,7 @@
                         <img class="w-16" src="./assets/Group.png" alt="">
                     </div>
                     <div>
-                        <h1 class="text-3xl font-bold">$ 4500</h1>
+                        <h1 class="text-3xl font-bold">$ <span id="main-balance">4500</span></h1>
                         <p class="border rounded p-1">available balance</p>
                     </div>
                 </div>
@@ -28,33 +28,40 @@
                 <h1 class="text-2xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
                 <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
                 <div class="cards grid grid-cols-3 mt-14 gap-2">
-                    <div class="box border p-4 text-center rounded-sm">
+                    <!-- add money box -->
+                    <div id="add-money-box" class="box border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/wallet 1.png" alt="">
                         <h3>Add Money</h3>
                     </div>
-                    <div class="box border p-4 text-center rounded-sm">
+                    <!-- cash out box -->
+                    <div id="cash-out-box" class="box border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/send 1.png" alt="">
                         <h3>Cashout</h3>
                     </div>
+                    <!-- transfer money box -->
                     <div class="box border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/money 1.png" alt="">
                         <h3>Transfer Money</h3>
                     </div>
+                    <!-- get bonus box -->
                     <div class="box border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/financial 1.png" alt="">
                         <h3>Get Bonus</h3>
                     </div>
+                    <!-- pay bill box -->
                     <div class="box border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/purse 1.png" alt="">
                         <h3>Pay Bill</h3>
                     </div>
+                    <!-- transactions box -->
                     <div class="box border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/transaction 1.png" alt="">
                         <h3>Transactions</h3>
                     </div>
                 </div>
             </section>
-            <section class="mt-4">
+            <!-- Add Money form -->
+            <section id="Add-money" class="mt-4">
                 <h2 class="text-2xl font-bold px-3">Add money</h2>
                 <div class="">
                     <div class="hero-content flex-col lg:flex-row-reverse">
@@ -69,11 +76,43 @@
                                 </select>
                                 <fieldset class="fieldset">
                                     <label class="fieldset-label">Account Number</label>
-                                    <input id="" type="number" class="input" placeholder="type your number" required />
+                                    <input value="12764980585" id="Account-number" type="number" class="input"
+                                        placeholder="type your number" required />
+                                    <label class="fieldset-label">amount</label>
+                                    <input id="amount" type="number" class="input" placeholder="type your Amount"
+                                        required />
                                     <label class="fieldset-label">PIN</label>
-                                    <input id="" type="text" class="input" placeholder="type your PIN" required />
+                                    <input value="1234" id="pin" type="text" class="input" placeholder="type your PIN"
+                                        required />
                                     <div><a class="link link-hover">Forgot password?</a></div>
-                                    <button id="" class="btn btn-neutral bg-blue-700 border-none mt-4">Add Money</button>
+                                    <button id="add-money" class="btn btn-neutral  bg-blue-800 border-none mt-4">Add
+                                        Money</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- cashout form -->
+            <section id="Cash-out" class="mt-4">
+                <h2 class="text-2xl font-bold px-3">Cash Out</h2>
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                            <form class="card-body">
+                                <fieldset class="fieldset">
+                                    <label class="fieldset-label">Agent Number</label>
+                                    <input id="Account-number" type="number" class="input"
+                                        placeholder="Enter 11 digit number" required />
+                                    <label class="fieldset-label">Amount</label>
+                                    <input id="amount" type="number" class="input"
+                                        placeholder="Enter amount to withdraw" required />
+                                    <label class="fieldset-label">PIN Number</label>
+                                    <input id="pin" type="text" class="input" placeholder="Enter 4 digit number"
+                                        required />
+                                    <div><a class="link link-hover">Forgot password?</a></div>
+                                    <button id="cash-out" class="btn btn-neutral bg-blue-800 border-none mt-4">Withdraw
+                                        Money</button>
                                 </fieldset>
                             </form>
                         </div>
@@ -82,6 +121,9 @@
             </section>
         </header>
     </section>
+    <!-- script link -->
+    <script src="./js/toggol.js"></script>
+    <script src="./js/addmoney.js"></script>
 
 </body>
 
